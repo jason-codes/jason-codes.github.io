@@ -10,7 +10,7 @@ function gatherData () {
         var otuValues = data.samples.map(row => row.sample_values);
         console.log(otuValues);
         var otuLabels = data.samples.map(row => row.otu_labels);
-        console.log(otuLables);
+        console.log(otuLabels);
     });
 };
 

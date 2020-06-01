@@ -7,6 +7,8 @@ function gatherData () {
         console.log(names);
         var otuIDs = data.samples.map(row => row);
         console.log(otuIDs);
+        var names2 = data.samples.map(row => row.id);
+        console.log(names2);
     });
 };
 

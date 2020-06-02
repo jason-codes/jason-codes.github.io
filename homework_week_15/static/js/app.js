@@ -1,7 +1,7 @@
 // Create data gathering function
 
 d3.json('samples.json').then(function(data) {
-    var allData = data;
+    allData = data;
 });
 
 

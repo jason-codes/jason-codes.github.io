@@ -1,13 +1,19 @@
 // Create data gathering function
 
-function gatherData() {
-    d3.json('samples.json').then(function(data) {
-        window.allData = data;
-        console.log(allData);
-    });
-};
+d3.json('samples.json').then(function(data) {
+    var allData = data;
+});
 
-gatherData();
+
+
+// function gatherData() {
+//     d3.json('samples.json').then(function(data) {
+//         window.allData = data;
+//         console.log(allData);
+//     });
+// };
+
+// gatherData();
 
 
 

@@ -1,0 +1,40 @@
+.jumbotron {
+    margin-top: 25px;
+    color: black;
+    background-color: gainsboro;
+}
+
+.jumbotron h2 {
+    font-weight: bold;
+}
+
+.card-header {
+    font-weight: bold;
+    background-color: gainsboro;
+}
+
+#score .list-group-item {
+    text-align: right;
+}
+
+#player {
+    color: blue;
+}
+
+#computer {
+    color: red;
+}
+
+.btn {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.card-img-top {
+    padding: 10%;
+    padding-top: 20%;
+}
+
+#winner {
+    font-weight: bold;
+}

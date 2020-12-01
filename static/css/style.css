@@ -103,6 +103,12 @@ body {
   margin-right: auto;
 }
 
+/* Non-Home Page Layouts
+-------------------------------------------------- */
+.container {
+  margin-top: 75px;
+}
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */

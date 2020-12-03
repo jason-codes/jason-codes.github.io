@@ -110,6 +110,23 @@ body {
 }
 
 
+/* Resume Page Layout
+-------------------------------------------------- */
+.resume-header-1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.resume-header-2 {
+  font-weight: 700;
+  color: #28a745;
+}
+
+.resume-header-3 {
+  font-weight: 600;
+}
+
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 

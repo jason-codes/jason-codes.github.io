@@ -106,15 +106,15 @@ body {
 /* Non-Home Page Layouts
 -------------------------------------------------- */
 .container {
-  margin-top: 75px;
+  margin-top: 4rem;
 }
 
 
 /* Resume Page Layout
 -------------------------------------------------- */
 .resume-header-1 {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .resume-header-2 {

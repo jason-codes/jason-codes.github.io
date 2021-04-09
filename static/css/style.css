@@ -147,7 +147,6 @@ body {
   color: #28a745;
 }
 
-
 /* Contact Page Layout
 -------------------------------------------------- */
 .contact-icon {
@@ -193,6 +192,17 @@ body {
   max-width: 100%;
   height: auto;
   border-radius: 10%;
+}
+
+/* Crime Page Layout
+-------------------------------------------------- */
+
+.crime-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 

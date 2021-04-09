@@ -37,14 +37,6 @@ body {
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
-/* Carousel base class */
-.carousel {
-  margin-top: 0%;
-  margin-bottom:0%;
-  margin-right: 0%;
-  margin-left: 0%;
-}
-
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   top: 50%;

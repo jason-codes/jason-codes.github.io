@@ -5,12 +5,61 @@ html {
   font-size: 1.125rem;
 }
 
+.bold {
+  font-weight: 600;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.green {
+  color: #28a745;
+}
+
 /* Padding below the footer and lighter body text */
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
   color: #5a5a5a;
 }
+
+/* Spacers */
+
+.spacer-75 {
+  margin-bottom: 0.75rem;
+}
+
+.spacer-100 {
+  margin-bottom: 1rem;
+}
+
+.spacer-150 {
+  margin-bottom: 1.5rem;
+}
+
+.spacer-200 {
+  margin-bottom: 2rem;
+}
+
+
+/* Images */
+.centered-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.rounded-15 {
+  border-radius: 15%;
+}
+
+.rounded-50 {
+  border-radius: 50%;
+}
+
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -112,46 +161,11 @@ body {
 }
 
 
-/* About Page Layout
--------------------------------------------------- */
-.about-spacer {
-  margin-bottom: 1rem;
-}
-
-.about-image {
-  display: block;
-  margin-top: 1rem;
-  margin-bottom: 1.25rem;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  height: auto;
-}
-
-.rounded-image {
-  border-radius: 50%;
-}
-
-/* Resume Page Layout
--------------------------------------------------- */
-.resume-header-1 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-
-.resume-header-2 {
-  font-weight: 600;
-}
-
-.resume-color {
-  color: #28a745;
-}
-
 /* Contact Page Layout
 -------------------------------------------------- */
 .contact-icon {
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
   margin-right: 0.75rem;
 }
 
@@ -185,15 +199,6 @@ body {
   color: white;
 }
 
-.contact-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10%;
-}
-
 /* Crime Page Layout
 -------------------------------------------------- */
 
@@ -203,7 +208,9 @@ body {
   margin-right: auto;
   max-width: 100%;
   height: auto;
+  border: 2px solid #28a745;
 }
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */

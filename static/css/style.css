@@ -17,6 +17,14 @@ html {
   color: #28a745;
 }
 
+.code {
+  font-size: 0.85rem;
+  font-family:'Courier New', Courier, monospace;
+  background-color: lightgray;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 /* Padding below the footer and lighter body text */
 body {
   padding-top: 3rem;

@@ -74,8 +74,7 @@
             </p>
             <p>
               Although the objective of pandemic-time restrictions is to slow the spread of COVID-19, they inadvertently affect crime rates. 
-              A decline in overall incidents is a predictable consequence given people's reluctance to leave their homes for fear of infection; 
-              less time spent in public and commercial spaces translates to fewer opportunities for criminals to prey. 
+              A decline in overall incidents is a predictable consequence given people's reluctance to leave their homes for fear of infection; less time spent in public and commercial spaces translates to fewer opportunities for criminals to prey. 
               However, the effects are not uniform across all types of crime nor every city neighborhood. 
               I learned this firsthand in February 2021 when my home in the Outer Richmond was burglarized. 
               During that same week, the Richmond district police station reported an alarming 367% rise in burglaries year-to-date.<sup>2</sup> 
@@ -91,15 +90,24 @@
         </div>
         <div class="row spacer-150">
           <div class="col-12">
-            <h4 class="spacer-150">Data Collection</h4>
+            <h4 class="spacer-150">Collection and Preprocessing</h4>
             <p>
               In the interests of transparency, interagency collaboration, and public participation, many government entities follow open data practices. 
-              The San Francisco Police Department publishes incident reports through <a href="https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-2018-to-Present/wg3w-h783" download target="_blank">DataSF</a>, a municipal organization that empowers the use of data for purposes of improving public programs and services. 
+              The San Francisco Police Department (SFPD) publishes incident reports via <a href="https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-2018-to-Present/wg3w-h783" download target="_blank">DataSF</a>, a municipal organization that empowers the use of data for purposes of improving public programs and services. 
               This rich dataset includes observations spanning variables <i>Analysis Neighborhood</i>, <i>Incident Category</i>, <i>Incident Datetime</i>, <i>Latitude</i>, <i>Longitude</i>, <i>Police District</i>, and more. 
-              Although DataSF makes it easy to view incident reports and create custom visualizations on its website, researchers wanting greater control over the quality and presentation of data can retrieve raw records from an application programming interface (API) for further cleansing and analysis.
+              Although DataSF makes it easy to view incident reports and create custom visualizations on its website, researchers wanting greater control over the quality and presentation of data can retrieve raw records from an application programming interface (API) for additional cleansing and analysis.
             </p>
             <p>
-              
+              This researcher fetched and cleansed SFPD records with Python. 
+              First, an HTTP <span class='code'>GET</span> request was sent to the API. 
+              An <i>Incident Date</i> query parameter filtered the JSON response to approximately 216,000 incidents occurring between March 17, 2019 and March 16, 2021. 
+              Next, the response was converted into a Pandas DataFrame and subjected to a data quality assessment. 
+              The scrutinized data proved to be sufficiently unique, complete, and timely, but it was not without quality issues, inconsistent categorical values in particular. 
+              Then, these discoveries of dirty data were corrected using the <span class='code'>FILLNA</span> and <span class='code'>REPLACE</span> methods. 
+              For example, <i>Incident Category</i> labels "Other" and "Other Offenses" were remapped to "Other Miscellaneous"—a third semantically equivalent label—thereby eliminating two redundant categories. 
+              Finally, the DataFrame was sliced with the <span class='code'>LOC</span> property. 
+              A conditional expression evaluating <i>Incident Date</i> separated incidents occurring prior to the lockdown from those following it. 
+              The processes of collection, transformation, cleansing, and organization prepared the data for analysis.
             </p>
           </div>
         </div>
@@ -110,7 +118,8 @@
               Text.
             </p>
             <p>
-              <!--Crime statistics aid law enforcement in the allocation of patrol resources and assessment of crime-curbing initiatives. <sup>2</sup> 
+              <!--With data preprocessing complete, accurate analysis, useful/efficient format, further processing, provide reliable, precise, and robust faster results accuracy of insights ; robust, accurate downstream analytics-->
+              <!-- reduce categories conventional vs variant, ash andersCrime statistics aid law enforcement in the allocation of patrol resources and assessment of crime-curbing initiatives. <sup>2</sup> 
               When recorded and analyzed, attributes of criminal activity such as category, location, and time can reveal behavioral patterns of perpetrators. 
               Furthermore, a change in pattern or frequency observed after the enactment of a new measure can help evaluators determine its effectiveness. 
               Imagine, for example, a crime analyst uncovers a considerably higher rate of disorderly conduct around Chase Center on evenings of concerts compared to those of sporting events. 

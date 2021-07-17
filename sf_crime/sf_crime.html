@@ -56,7 +56,7 @@
 
     <main role="main">
       <div class="container">
-        <div class="row justify-content-center spacer-150">
+        <div class="row spacer-150">
           <div class="col-12">
             <h2>San Francisco Crime after COVID-19 Outbreak:</h2>
             <h4>Pandemic-Induced Restrictions Force Criminals to Alter Behaviors</h4>
@@ -78,7 +78,7 @@
               However, the effects are not uniform across all types of crime nor every city neighborhood. 
               I learned this firsthand in February 2021 when my home in the Outer Richmond was burglarized. 
               During that same week, the Richmond district police station reported an alarming 367% rise in burglaries year-to-date.<sup>2</sup> 
-              The lack of pedestrian traffic had forced criminals searching for cash, jewelry, and other valuables to target residences and businesses with greater frequency.
+              A lack of pedestrian traffic had forced criminals searching for cash, jewelry, and other valuables to target residences and businesses with greater frequency.
             </p>
             <p>
               This research brief is aimed at surfacing trends in San Francisco crime since the city's sweeping adoption of pandemic-fighting measures. 
@@ -95,19 +95,19 @@
               In the interests of transparency, interagency collaboration, and public participation, many government entities follow open data practices. 
               The San Francisco Police Department (SFPD) publishes incident reports via <a href="https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-2018-to-Present/wg3w-h783" download target="_blank">DataSF</a>, a municipal organization that empowers the use of data for purposes of improving public programs and services. 
               This rich dataset includes observations spanning variables <i>Analysis Neighborhood</i>, <i>Incident Category</i>, <i>Incident Datetime</i>, <i>Latitude</i>, <i>Longitude</i>, <i>Police District</i>, and more. 
-              Although DataSF makes it easy to view incident reports and create custom visualizations on its website, researchers wanting greater control over the quality and presentation of data can retrieve raw records from an application programming interface (API) for additional cleansing and analysis.
+              Although DataSF makes it easy to view incident reports and create custom visualizations directly on its website, researchers wanting greater control over the quality and presentation of data can retrieve raw records from an application programming interface (API).
             </p>
             <p>
               This researcher fetched and cleansed SFPD records with Python. 
               First, an HTTP <span class='code'>GET</span> request was sent to the API. 
               An <i>Incident Date</i> query parameter filtered the JSON response to approximately 216,000 incidents occurring between March 17, 2019 and March 16, 2021. 
               Next, the response was converted into a Pandas DataFrame and subjected to a data quality assessment. 
-              The scrutinized data proved to be sufficiently unique, complete, and timely, but it was not without quality issues, inconsistent categorical values in particular. 
-              Then, these discoveries of dirty data were corrected using the <span class='code'>FILLNA</span> and <span class='code'>REPLACE</span> methods. 
+              The dataset proved to be sufficiently unique, complete, and timely, but it was not without several issues, inconsistent categorical values in particular. 
+              Then, discoveries of dirty data were corrected using the <span class='code'>FILLNA</span> and <span class='code'>REPLACE</span> methods. 
               For example, <i>Incident Category</i> labels "Other" and "Other Offenses" were remapped to "Other Miscellaneous"—a third semantically equivalent label—thereby eliminating two redundant categories. 
               Finally, the DataFrame was sliced with the <span class='code'>LOC</span> property. 
-              A conditional expression evaluating <i>Incident Date</i> separated incidents occurring prior to the lockdown from those following it. 
-              The processes of collection, transformation, cleansing, and organization prepared the data for analysis.
+              A conditional expression separated incidents occurring prior to the lockdown from those following it. 
+              As a result of collection, transformation, cleansing, and organization, the data was ready for analysis.
             </p>
           </div>
         </div>
@@ -117,38 +117,48 @@
             <p>
               Text.
             </p>
+            <img class="crime-image" src="img/incidents_daily.png" alt='Scatter Plot: Number of Incidents vs. Date'>
+            <p><b>Figure 1. </b>Daily number of incidents reported to the San Francisco Police Department.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <img class="crime-image" src="img/incidents_police_district.png" alt='Bar Chart: Number of Incidents vs. Police District'>
+            <p><b>Figure 2. </b> Number of incidents reported in each police district within one year of the lockdown.</p>
             <p>
-              <!--With data preprocessing complete, accurate analysis, useful/efficient format, further processing, provide reliable, precise, and robust faster results accuracy of insights ; robust, accurate downstream analytics-->
-              <!-- reduce categories conventional vs variant, ash andersCrime statistics aid law enforcement in the allocation of patrol resources and assessment of crime-curbing initiatives. <sup>2</sup> 
-              When recorded and analyzed, attributes of criminal activity such as category, location, and time can reveal behavioral patterns of perpetrators. 
-              Furthermore, a change in pattern or frequency observed after the enactment of a new measure can help evaluators determine its effectiveness. 
-              Imagine, for example, a crime analyst uncovers a considerably higher rate of disorderly conduct around Chase Center on evenings of concerts compared to those of sporting events. 
-              Local officials may mandate additional security or limit alcohol sales during concerts in response. 
-              If nightly incidents decline significantly in the ensuing months, then the measure is successful at maintaining the peace. 
-              A deeper understanding of criminal behavior leads to predictive policing methods, efficient use of resources, and, ultimately, safer neighborhoods. -->
-            </p>
-            <p>
-              <!--Incidents reported before and after the lockdown are charted by category, location, and time for illustrative comparison. 
-              Observations made about the behavioral patterns of lawbreakers can inform 
-              to illustrate the dramatic shifts in behavioral patterns of lawbreakers.-->
-              <!--Incidents reported before and after the lockdown are compared to This research brief analyzes incident reports made available by the San Francisco Police Department to surface trends in crime. 
-              surface trends in criminal activity Through analysis of incident reports made available by the San Francisco Police Department, this research brief shows that pandemic-induced trends in criminal behaviors vary widely by type of crime, location, and time. -->
-              <!-- so that hte community may scarcity of opportunities, and criminals took notice stymie concerts vs sporting events Dimensions of criminal activity
-                Dimension are made clearWhy disect criminal activity to properly staff in the right places at the right time for patrol; observable
-                1. https://www.sfgate.com/bayarea/article/shelter-in-place-San-Francisco-Mayor-London-Breed-15135075.php
-                3. https://ucr.fbi.gov/ucr-statistics-their-proper-use
-                2. https://mcusercontent.com/77e91a4189e08fad5f9e7421a/files/5373e4bd-fb6a-4d48-8e56-82970c9947f8/2_10_2021_NEWSLETTER.pdf
-              adhering to social distancing guidelines For many, the pandemic has meant social gatherings on Zoom, remote work -->
-              <!-- risk of infenction ; re-engage with the outdoors, date night became take out, parties were held Zoom, Social distancing, remote learning, curfew-->
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Etiam dignissim diam quis enim. Pellentesque dignissim enim sit amet. Rutrum quisque non tellus orci ac auctor augue. 
+              Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Aliquet porttitor lacus luctus accumsan tortor posuere ac. 
+              Sit amet mauris commodo quis imperdiet massa tincidunt. Phasellus vestibulum lorem sed risus ultricies tristique nulla. 
+              A diam sollicitudin tempor id eu nisl. Amet mattis vulputate enim nulla. 
+              Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Etiam dignissim diam quis enim. Pellentesque dignissim enim sit amet. Rutrum quisque non tellus orci ac auctor augue. 
+              Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Aliquet porttitor lacus luctus accumsan tortor posuere ac. 
             </p>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
-            <img class="crime-image" src="img/incidents_category.png" alt="Incidents by Category">
+          <div class="col-xl-4">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Etiam dignissim diam quis enim. Pellentesque dignissim enim sit amet. Rutrum quisque non tellus orci ac auctor augue. 
+              Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Aliquet porttitor lacus luctus accumsan tortor posuere ac. 
+              Sit amet mauris commodo quis imperdiet massa tincidunt. Phasellus vestibulum lorem sed risus ultricies tristique nulla. 
+              A diam sollicitudin tempor id eu nisl. Amet mattis vulputate enim nulla. 
+              Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et.
+              Sit amet mauris commodo quis imperdiet massa tincidunt. Phasellus vestibulum lorem sed risus ultricies tristique nulla. 
+              A diam sollicitudin tempor id eu nisl. Amet mattis vulputate enim nulla. 
+              Sit amet mauris commodo quis imperdiet massa tincidunt. Phasellus vestibulum lorem sed risus ultricies tristique nulla. 
+            </p>
+          </div>
+          <div class="col-xl-8">
+            <img class="crime-image" src="img/incidents_category.png" alt='Bar Chart: Category vs. Percent Change'>
+            <p><b>Figure 3. </b>Percent change in the number of incidents per category.</p>
           </div>
         </div>
-        <hr>
+
+<!--        
         <div class="row justify-content-center">
           <div class="col-md-6">
             <img class="crime-image" src="img/incidents_location_pre.png" alt="Incidents by Location Pre-Lockdown">
@@ -175,11 +185,37 @@
             <img class="crime-image" src="img/incidents_hourly_post.png" alt="Incidents by Day and Hour Post-Lockdown">
           </div>
         </div>
+-->
         <hr>
         <div class="row justify-content-center">
           <div class="col-md-12">
             <br>
             <a href="sf_crime_analysis.ipynb" download target="_blank">Download Jupyter Notebook</a>
+            <p>
+              <!--A conditional expression evaluating <i>Incident Date</i> separated incidents occurring prior to the lockdown from those following it. 
+                With data preprocessing complete, accurate analysis, useful/efficient format, further processing, provide reliable, precise, and robust faster results accuracy of insights ; robust, accurate downstream analytics-->
+              <!-- reduce categories conventional vs variant, ash andersCrime statistics aid law enforcement in the allocation of patrol resources and assessment of crime-curbing initiatives. <sup>2</sup> 
+              When recorded and analyzed, attributes of criminal activity such as category, location, and time can reveal behavioral patterns of perpetrators. 
+              Furthermore, a change in pattern or frequency observed after the enactment of a new measure can help evaluators determine its effectiveness. 
+              Imagine, for example, a crime analyst uncovers a considerably higher rate of disorderly conduct around Chase Center on evenings of concerts compared to those of sporting events. 
+              Local officials may mandate additional security or limit alcohol sales during concerts in response. 
+              If nightly incidents decline significantly in the ensuing months, then the measure is successful at maintaining the peace. 
+              A deeper understanding of criminal behavior leads to predictive policing methods, efficient use of resources, and, ultimately, safer neighborhoods. -->
+            </p>
+            <p>
+              <!--Incidents reported before and after the lockdown are charted by category, location, and time for illustrative comparison. 
+              Observations made about the behavioral patterns of lawbreakers can inform 
+              to illustrate the dramatic shifts in behavioral patterns of lawbreakers.-->
+              <!--Incidents reported before and after the lockdown are compared to This research brief analyzes incident reports made available by the San Francisco Police Department to surface trends in crime. 
+              surface trends in criminal activity Through analysis of incident reports made available by the San Francisco Police Department, this research brief shows that pandemic-induced trends in criminal behaviors vary widely by type of crime, location, and time. -->
+              <!-- so that hte community may scarcity of opportunities, and criminals took notice stymie concerts vs sporting events Dimensions of criminal activity
+                Dimension are made clearWhy disect criminal activity to properly staff in the right places at the right time for patrol; observable
+                1. https://www.sfgate.com/bayarea/article/shelter-in-place-San-Francisco-Mayor-London-Breed-15135075.php
+                3. https://ucr.fbi.gov/ucr-statistics-their-proper-use
+                2. https://mcusercontent.com/77e91a4189e08fad5f9e7421a/files/5373e4bd-fb6a-4d48-8e56-82970c9947f8/2_10_2021_NEWSLETTER.pdf
+              adhering to social distancing guidelines For many, the pandemic has meant social gatherings on Zoom, remote work -->
+              <!-- risk of infenction ; re-engage with the outdoors, date night became take out, parties were held Zoom, Social distancing, remote learning, curfew-->
+            </p>
           </div>
         </div>
       </div>

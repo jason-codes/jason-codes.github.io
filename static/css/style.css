@@ -34,6 +34,14 @@ body {
 
 /* Spacers */
 
+.spacer-top-50 {
+  margin-top: 0.5rem;
+}
+
+.spacer-50 {
+  margin-bottom: 0.5rem;
+}
+
 .spacer-75 {
   margin-bottom: 0.75rem;
 }

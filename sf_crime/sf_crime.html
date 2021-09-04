@@ -78,8 +78,8 @@
               more time spent indoors translated to fewer opportunities for criminals to prey. 
               However, the effects were not uniform across all types of crime nor every city neighborhood. 
               I learned this firsthand in February 2021 when my home in the Outer Richmond was burglarized. 
-              During that same week, the Richmond district police station reported an alarming 367% rise in burglaries year-to-date.<sup>2</sup> 
-              A lack of pedestrian traffic had compelled thieves in search of cash, jewelry, and other valuables to target residences and businesses with greater frequency.
+              During that same week, the Richmond district police station reported an alarming 367 percent rise in burglaries year-to-date.<sup>2</sup> 
+              A lack of pedestrian traffic had compelled thieves searching for cash, jewelry, and other valuables to target residences and businesses with greater frequency.
             </p>
             <p>
               This research brief is aimed at surfacing crime trends in San Francisco since the city's sweeping adoption of pandemic-fighting measures. 
@@ -94,7 +94,7 @@
             <h4 class="spacer-150">Collection and Preprocessing</h4>
             <p>
               In the interests of transparency, interagency collaboration, and public participation, many government entities follow open data practices. 
-              The San Francisco Police Department (SFPD) publishes incident reports via <a href="https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-2018-to-Present/wg3w-h783" download target="_blank">DataSF</a>, a municipal organization that empowers the use of data for purposes of improving public programs and services. 
+              The San Francisco Police Department (SFPD) publishes incident reports via <a href="https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-2018-to-Present/wg3w-h783" target="_blank">DataSF</a>, a municipal organization that empowers the use of data for purposes of improving public programs and services. 
               Their rich dataset includes observations spanning variables <i>Analysis Neighborhood</i>, <i>Incident Category</i>, <i>Incident Datetime</i>, <i>Latitude</i>, <i>Longitude</i>, <i>Police District</i>, and more. 
               Although DataSF makes it easy to view incident reports and create custom visualizations directly on its website, researchers wanting greater control over the quality and presentation of data can retrieve raw records from an application programming interface, or API.
             </p>
@@ -117,13 +117,13 @@
             <h4 class="spacer-150">Analysis</h4>
             <p>
               Stringent restrictions imposed by San Francisco Health Officer Tomás Aragón catalyzed a precipitous drop in crime. 
-              Prior to Order C19-07, the first citywide shelter-in-place order issued in the United States, aggregate movement had remained relatively unchanged from previous years despite growing fears of COVID-19. 
+              Prior to Order C19-07, the first citywide shelter-in-place order issued in the United States, aggregate movement had been relatively stable despite growing fears of COVID-19. 
               In a 2020 annual report, the San Francisco Municipal Transportation Agency stated a 1.5 percent year-over-year rise in ridership, i.e., average weekday boardings, in February, the last full month before the lockdown.<sup>3</sup> 
               This sustained level of activity was reflected in the rate of incidents. 
-              As shown in Figure 1, the average daily incident count (ADIC) for the sixty-day period immediately preceding the lockdown was just slightly lower than the ADIC for the full year—318 incidents compared to 337. 
-              Aragón's order, effective beginning March 17, 2020, caused activity to slow and, consequently, the rate of incidents to plummet. 
-              In the first sixty days under lockdown, the ADIC fell 31.5% from the previous sixty-day period to 218 incidents. 
-              This trend of reduced crime would persist even after initial restrictions eased, likely due to ongoing social distancing practices that increase physical space between criminals and their targets.
+              As shown in Figure 1, the average daily incident count (ADIC) for the sixty-day period immediately preceding the lockdown was only marginally lower than the ADIC for the full year—318 incidents compared to 337. 
+              The order, effective beginning March 17, 2020, caused activity to slow and, consequently, the rate of incidents to plummet. 
+              Ridership decreased by 86.7 percent in April, and the ADIC fell by a third to 218 incidents in the first sixty days under lockdown. 
+              Crime rebounded slightly after initial restrictions were eased but remained well below the previous year's level due to ongoing social distancing measures and diminished activity.
             </p>
           </div>
         </div>
@@ -142,38 +142,51 @@
         <div class="row">
           <div class="col-12">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Etiam dignissim diam quis enim. Pellentesque dignissim enim sit amet. Rutrum quisque non tellus orci ac auctor augue. 
-              Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Aliquet porttitor lacus luctus accumsan tortor posuere ac. 
-              Sit amet mauris commodo quis imperdiet massa tincidunt. Phasellus vestibulum lorem sed risus ultricies tristique nulla. 
-              A diam sollicitudin tempor id eu nisl. Amet mattis vulputate enim nulla. 
-              Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Etiam dignissim diam quis enim. Pellentesque dignissim enim sit amet. Rutrum quisque non tellus orci ac auctor augue. 
-              Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Aliquet porttitor lacus luctus accumsan tortor posuere ac. 
+              While the pandemic response curbed crime throughout most of San Francisco, it disproportionately lowered incident rates for <a href="https://www.sanfranciscopolice.org/your-sfpd/sfpd-stations/station-finder" target="_blank">SFPD districts</a> encompassing areas of commerce, entertainment, and tourism. 
+              As shown in Figure 2, districts within the city's historically vibrant northeast quadrant—Central, Mission, Northern, Southern, and Tenderloin—observed significantly larger declines in incidents than did other more residential districts. 
+              Central, which includes Chinatown, Financial District, and Fisherman's Wharf, recorded 8,526 (44.6%) fewer incidents in the year after the start of the lockdown, the biggest drop among all ten districts. 
+              Northern, which includes Civic Center, Japantown, and Polk Gulch, narrowly edged Southern and Mission to log the second biggest slide with 4,894 (26.9%) less incidents. 
+              In comparison, total incidents fell by only 3,774 (16.5%) in Park, Richmond, and Taraval combined. 
+              Interdistrict disparities in the impact of COVID-19 on crime were even more pronounced in Bayview and Ingleside, where the numbers of incidents remained virtually unchanged from the prior year.
             </p>
           </div>
         </div>
-        <div class="row">
+        <div class="row spacer-top-50">
+          <div class="col-xl-7 spacer-50">
+            <img class="crime-image" src="img/incidents_category.png" alt='Bar Chart: Category vs. Percent Change'>
+            <p><b>Figure 3. </b>Percent change in the annual number of incidents per category.</p>
+          </div>
           <div class="col-xl-5">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
               Etiam dignissim diam quis enim. Pellentesque dignissim enim sit amet. Rutrum quisque non tellus orci ac auctor augue. 
               Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Aliquet porttitor lacus luctus accumsan tortor posuere ac. 
               Sit amet mauris commodo quis imperdiet massa tincidunt. Phasellus vestibulum lorem sed risus ultricies tristique nulla. 
-              A diam sollicitudin tempor id eu nisl. Amet mattis vulputate enim nulla. 
-              Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et.
-              Sit amet mauris commodo quis imperdiet massa tincidunt. Phasellus vestibulum lorem sed risus ultricies tristique nulla. 
-              A diam sollicitudin tempor id eu nisl. Amet mattis vulputate enim nulla. 
-              Sit amet mauris commodo quis imperdiet massa tincidunt. Phasellus vestibulum lorem sed risus ultricies tristique nulla. 
-              Sit amet mauris commodo quis imperdiet massa tincidunt. Phasellus vestibulum lorem sed risus ultricies tristique nulla. 
-              A diam sollicitudin tempor id eu nisl. Amet mattis vulputate enim nulla. 
-              Sit amet mauris commodo quis imperdiet massa tincidunt. Phasellus vestibulum lorem sed risus ultricies tristique nulla. 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Etiam dignissim diam quis enim. Pellentesque dignissim enim sit amet. Rutrum quisque non tellus orci ac auctor augue. 
+              Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Aliquet porttitor lacus luctus accumsan tortor posuere ac. 
+              Sit amet mauris commodo quis imperdiet massa tincidunt. Phasellus vestibulum lorem sed risus ultricies tristique nulla.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Etiam dignissim diam quis enim. Pellentesque dignissim enim sit amet. Rutrum quisque non tellus orci ac auctor augue. 
+              Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Aliquet porttitor lacus luctus.
             </p>
           </div>
-          <div class="col-xl-7 spacer-top-50 spacer-50">
-            <img class="crime-image" src="img/incidents_category.png" alt='Bar Chart: Category vs. Percent Change'>
-            <p><b>Figure 3. </b>Percent change in the annual number of incidents per category.</p>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Etiam dignissim diam quis enim. Pellentesque dignissim enim sit amet. Rutrum quisque non tellus orci ac auctor augue. 
+              Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Aliquet porttitor lacus luctus accumsan tortor posuere ac. 
+              Sit amet mauris commodo quis imperdiet massa tincidunt. Phasellus vestibulum lorem sed risus ultricies tristique nulla. 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Etiam dignissim diam quis enim. Pellentesque dignissim enim sit amet. Rutrum quisque non tellus orci ac auctor augue. 
+              Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Aliquet porttitor lacus luctus accumsan tortor posuere ac. 
+              Sit amet mauris commodo quis imperdiet massa tincidunt. Phasellus vestibulum lorem sed risus ultricies tristique nulla.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Etiam dignissim diam quis enim. Pellentesque dignissim enim sit amet. Rutrum quisque non tellus orci ac auctor augue. 
+              Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Aliquet porttitor lacus luctus.
+            </p>
           </div>
         </div>
 
@@ -216,7 +229,14 @@
                       S1P3: By leveraging these insights, local officials and law enforcement can adapt policing and crime prevention strategies to new criminal behaviors.
                       S3P1: Examples of ongoing in-person activities throughout the city: telecommuting, distance learning, nightlife, shopping, 
                       S3P1: Ordered many businesses to cease operations and individuals to shelter in place.
-                  Terms:
+                      S3P1: Prior to Order C19-07, the first citywide shelter-in-place order issued in the United States, aggregate movement had remained relatively unchanged from previous years despite growing fears of COVID-19.
+                      S3P1: In the first sixty days under lockdown, the ADIC fell by 31.6% from the previous sixty-day period to 218 incidents. 
+                      S3P1: This trend of reduced crime would persist even after initial restrictions eased, likely due to ongoing social distancing practices that increase physical space between criminals and their marks.
+                      S3P2: Mission (Castro District and Dolores Park); Southern (Chase Center, Oracle Park, Yerba Buena), and Tenderloin (TBD).
+                      S3P2: Northern, which includes Civic Center, Japantown, and Polk Gulch, logged 4,894 (26.9%) less incidents and thus narrowly surpassed Southern and Mission as having the second biggest slide by total.
+                      S3P2: Such disparities in crime drop between districts present questions/challenges about resource allocation corresponding station and staff, reflect, the extent of drops reflect, albeit not perfectly, the drop in need of resources of each SFPD district station. 
+                      S3P2: In comparison, total incidents remained virtually unchanged in both Bayview and Ingleside and fell by only 3,774 (16.5%) in Park, Richmond, and Taraval combined.
+                      Terms:
                       illustrative comparison, dimensions of criminal activity, crime-curbing, non-essential, allocation of patrol resources, pandemic-time
                   Changes:
                       adhering to social distancing guidelines; pandemic meant Zoom social gatherings, remote work, curfew, re-engage with outdoors, date night = take-out, Zoom parties, actively monitor surroundings
@@ -228,7 +248,8 @@
               Imagine, for example, a crime analyst uncovers a considerably higher rate of disorderly conduct around Chase Center on evenings of concerts compared to those of sporting events. 
               Local officials may mandate additional security or limit alcohol sales during concerts in response. 
               If nightly incidents decline significantly in the ensuing months, then the measure is successful at maintaining the peace. 
-              A deeper understanding of criminal behavior leads to predictive policing methods, efficient use of resources, and, ultimately, safer neighborhoods. -->
+              A deeper understanding of criminal behavior leads to predictive policing methods, efficient use of resources, and, ultimately, safer neighborhoods. 
+              Clerks, dispatchers, officers; rebalance -->
             </p>
             <p>
               <!-- Resources: 
